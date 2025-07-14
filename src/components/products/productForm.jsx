@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const ProductForm = ({ product, onClose }) => {
     const [nombre_producto, setNombreProducto] = useState('');
     const [imagen, setImagen] = useState('');
@@ -50,9 +52,9 @@ const ProductForm = ({ product, onClose }) => {
 
         try {
             if (product) {
-                await axios.put(`http://localhost:5000/api/products/${product._id}`, productData);
+                await axios.put(`${API_URL}/api/products/${product._id}`, productData);
             } else {
-                await axios.post('http://localhost:5000/api/products', productData);
+                await axios.post(`${API_URL}/api/products`, productData);
             }
             onClose();
         } catch (err) {
@@ -118,6 +120,7 @@ const ProductForm = ({ product, onClose }) => {
                         {product ? 'Actualizar Producto' : 'Agregar Producto'}
                     </button>
                     <button
+                        className="button-delete"
                         type="button"
                         onClick={onClose}
                     >
