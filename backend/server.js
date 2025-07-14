@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/auth');
+const productRoutes = require('./routes/products');
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 //Rutas API
 app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
 
 //Inicio del servidor
 app.listen(PORT, () => {
