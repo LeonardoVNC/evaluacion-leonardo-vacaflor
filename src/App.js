@@ -1,6 +1,7 @@
 import Login from './components/auth/login';
 import Home from './components/products/home';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import './styles.css';
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem('token');
