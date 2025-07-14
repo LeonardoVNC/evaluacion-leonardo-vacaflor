@@ -62,7 +62,7 @@ const ProductList = () => {
                         >
                             Editar
                         </button>
-                        <button
+                        <button className="button-delete"
                             onClick={() => handleDelete(product._id)}
                         >
                             Eliminar

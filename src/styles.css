@@ -30,6 +30,7 @@ form {
 }
 
 input[type="text"],
+input[type="number"],
 textarea {
   padding: 10px;
   margin: 10px 0;
@@ -84,4 +85,13 @@ li h3 {
 
 li p {
   margin: 5px 0;
+}
+
+/* styles.css */
+img {
+    max-width: 100%; /* La imagen no excederá el ancho de su contenedor */
+    max-height: 200px; /* Establece una altura máxima de 200px */
+    width: auto; /* Mantiene la relación de aspecto */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
 }
