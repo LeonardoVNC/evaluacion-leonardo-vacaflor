@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Prueba técnica TuPunto
+Este repositorio se creó con el fin de responder a la prueba técnica proporcionada por TuPunto, en la cual se busca crear un pequeño modelo de E-Commerce, con funciones de login, presentación de productos y operaciones CRUD sobre estos mismos. Empleando MongoDB, Mongoose, Express, API-Rest y React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Ejecutar el proyecto
+## Clonar el proyecto
+Para clonar el repositorio, a través de una terminar con Git instalado, ejecute el siguiente comando:
+```
+git clone https://github.com/LeonardoVNC/evaluacion-leonardo-vacaflor.git
+```
 
-## Available Scripts
+## Paquetes Node
+El proyecto emplea NPM para administrar las librerias usadas, por lo que para iniciar el proyecto correctamente ejecute los siguientes comandos, iniciando desde el directorio raiz del repositorio:
+```
+npm i
+cd backend
+npm i
+```
+Hecho esto, habrá instalado las librerias para ambas partes del proyecto.
 
-In the project directory, you can run:
+## Variables de entorno
+Dentro del directorio raiz del repositorio, cree un archivo `.env` con la siguiente estructura:
+```js
+REACT_APP_API_URL=`Dirección URL donde se ejecuta el Backend. Ejemplo http://localhost:5000`
+```
 
-### `npm start`
+Dentro de la carpeta `backend` cree otro archivo `.env` con la siguiente estructura:
+```js
+MONGODB_URI=`Conexión URI a MongoDB`
+PORT=`Puerto en el que corre el servicio`
+JWT_SECRET=`Cadena secreta de caracteres JWT`
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Ejecución del proyecto
+### FrontEnd
+Para ejecutar el frontend, desde el directorio raiz del repositorio, ejecute el siguiente comando:
+```
+npm run start
+```
+Una vez terminado el proceso, en su navegador se abrirá el proyecto.
+## BackEnd
+Para ejecutar el backend ingrese al directorio `backend` y dentro ejecute el siguiente comando:
+```
+node server.js
+```
+Si el backend se ha abierto correctamente, deberia recibir una confirmación en la terminal.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Login
+Para logearse en la página debe crear un usuario desde Postman (para emplear el cifrado de contraseñas). Una vez creado el usuario podrá ingresar a la página con las credenciales que haya seleccionado. Ejemplo:
+- Usuario: develop
+- Contraseña: develop123
